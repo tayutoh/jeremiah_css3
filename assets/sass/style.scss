@@ -1,0 +1,146 @@
+.jeremiah {
+    @mixin size {
+        width: 674px;
+        height: 900px;
+    }
+
+    @mixin backgrounds {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 674px auto;
+    }
+
+    @mixin position {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    @include size;
+    @include backgrounds;
+    background-image: url(/assets/image/body.png);
+    margin: 0 auto;
+    position: relative;
+
+    &__face {
+        @include size;
+        @include backgrounds;
+        @include position;
+        background-image: url(/assets/image/face_hair.png);
+        transform-origin: 382px 200px;
+        animation: faceAnime 4s ease 0s infinite;
+    }
+
+    @keyframes faceAnime {
+        0%{ transform:rotate(0deg); }
+        5%{ transform:rotate(0deg); }
+        30%{ transform:rotate(-2deg); }
+        55%{ transform:rotate(1deg); }
+        100%{ transform:rotate(0deg); }
+    }
+
+    &__eyebrow {
+        @include size;
+        @include backgrounds;
+        @include position;
+        background-image: url(/assets/image/eyebrow_nose.png);
+        transform-origin: 382px 200px;
+        animation: eyebrowAnime 4s ease 0s infinite;
+    }
+
+    @keyframes eyebrowAnime {
+        0%{ transform:rotate(0deg); }
+        5%{ transform:rotate(0deg); }
+        30%{ transform:rotate(-2deg); }
+        55%{ transform:rotate(1deg); }
+        100%{ transform:rotate(0deg); }
+    }
+
+    &__eye {
+        @include size;
+        @include backgrounds;
+        @include position;
+        background-image: url(/assets/image/eye_default.png);
+        position: absolute;
+        transform-origin: 382px 200px;
+        animation: eyeAnime 4s ease 0s infinite;
+    }
+
+    @keyframes eyeAnime {
+        0%{ transform:rotate(0deg); }
+        5%{ transform:rotate(0deg); }
+        30%{ transform:rotate(-2deg); }
+        55%{ transform:rotate(1deg); }
+        60% { background-image: url(/assets/image/eye_half.png); }
+        80%{ background-image: url(/assets/image/eye_close.png); }
+        100%{ transform:rotate(0deg); }
+    }
+
+    &__mouth {
+        @include size;
+        @include backgrounds;
+        @include position;
+        background-image: url(/assets/image/mouth.png);
+        transform-origin: 382px 200px;
+        animation: mouthAnime 4s ease 0s infinite;
+    }
+
+    @keyframes mouthAnime {
+        0%{ transform:rotate(0deg); }
+        5%{ transform:rotate(0deg); }
+        30%{ transform:rotate(-2deg); }
+        55%{ transform:rotate(1deg); }
+        100%{ transform:rotate(0deg); }
+    }
+
+    &__bangs {
+        @include size;
+        @include backgrounds;
+        @include position;
+        background-image: url(/assets/image/bangs.png);
+        transform-origin: 382px 200px;
+        animation: bangsAnime 4s ease 0s infinite;
+    }
+
+    @keyframes bangsAnime {
+        0%{ transform:rotate(0deg); }
+        5%{ transform:rotate(0deg); }
+        30%{ transform:rotate(-2deg); }
+        55%{ transform:rotate(1deg); }
+        100%{ transform:rotate(0deg); }
+    }
+
+    &__cloak {
+        @include size;
+        @include backgrounds;
+        @include position;
+        background-image: url(/assets/image/cloak.png);
+        transform-origin: 382px 200px;
+        //animation: cloakAnime 4s ease 0s infinite;
+    }
+
+    @keyframes cloakAnime {
+        0%{ transform:rotate(0deg); }
+        5%{ transform:rotate(0deg); }
+        30%{ transform:rotate(-1deg); }
+        55%{ transform:rotate(1deg); }
+        100%{ transform:rotate(0deg); }
+    }
+
+    &__feather {
+        @include size;
+        @include backgrounds;
+        @include position;
+        background-image: url(/assets/image/feather.png);
+        transform-origin: 382px 200px;
+        // animation: featherAnime 4s ease 0s infinite;
+    }
+
+    @keyframes featherAnime {
+        0%{ transform:rotate(0deg); }
+        5%{ transform:rotate(0deg); }
+        30%{ transform:rotate(-2deg); }
+        55%{ transform:rotate(1deg); }
+        100%{ transform:rotate(0deg); }
+    }
+}
